@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instituto INNOVATEC</title>
+
+    <link rel="stylesheet" href="boots/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>h1 { font-weight: bold; }</style>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>INNOVATEC</h1>
+        <p>Instituto de formación técnica</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#carreras">Carreras</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#admision">Admisión</a>
+        <a href="#registro">Contacto</a>
+    </nav>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <div class="contenedor portada">
+                <div>
+                    <h2>Prepárate para tu futuro profesional</h2>
+                    <p>En INNOVATEC encontrarás carreras técnicas para desarrollar tus habilidades en tecnología, diseño y administración.</p>
+                    <a href="#carreras" class="btn btn-primary">Conocer las carreras</a>
+                </div>
+
+                <aside class="informacion">
+                    <img class="foto-portada" src="fotos/estudio.jpg" alt="Personas trabajando en equipo con computadoras">
+                    <h3>Información para postulantes</h3>
+                    <ul>
+                        <li>Formación con ejercicios y proyectos.</li>
+                        <li>Modalidad presencial y virtual.</li>
+                        <li>Orientación para elegir tu carrera.</li>
+                    </ul>
+                    <a href="#registro">Solicitar información →</a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="contenedor" id="carreras">
+            <h2>Nuestras carreras</h2>
+            <p>Conoce las opciones de formación que ofrecemos.</p>
+            <div class="carreras">
+
+                <article class="card">
+                    <img src="fotos/software.jpg" alt="Persona programando en una computadora portátil" loading="lazy">
+                    <h3>Desarrollo de Software</h3>
+                    <p>Aprende programación y creación de páginas web.</p>
+                    <ul><li>Lógica de programación</li><li>HTML, CSS y JavaScript</li><li>Bases de datos</li></ul>
+                    <a href="#registro" class="btn btn-outline-primary">Solicitar información</a>
+                </article>
+
+                <article class="card">
+                    <img src="fotos/diseno.jpg" alt="Computadora y tableta con herramientas de diseño digital" loading="lazy">
+                    <h3>Diseño Digital</h3>
+                    <p>Desarrolla tu creatividad con herramientas digitales.</p>
+                    <ul><li>Diseño gráfico</li><li>Edición de imágenes</li><li>Diseño de interfaces</li></ul>
+                    <a href="#registro" class="btn btn-outline-primary">Solicitar información</a>
+                </article>
+
+                <article class="card">
+                    <img src="fotos/administracion.jpg" alt="Equipo reunido para revisar un proyecto empresarial" loading="lazy">
+                    <h3>Administración de Empresas</h3>
+                    <p>Aprende a organizar y gestionar un negocio.</p>
+                    <ul><li>Administración</li><li>Marketing</li><li>Emprendimiento</li></ul>
+                    <a href="#registro" class="btn btn-outline-primary">Solicitar información</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="nosotros" id="nosotros">
+            <div class="contenedor">
+                <h2>Sobre el instituto</h2>
+                <p>INNOVATEC es una institución de formación técnica que busca relacionar lo que se aprende en clase con la práctica.</p>
+                <div class="mision-vision">
+                    <div><h3>Misión</h3><p>Formar estudiantes con conocimientos técnicos y responsabilidad para resolver problemas de su entorno.</p></div>
+                    <div><h3>Visión</h3><p>Ser un instituto reconocido por la formación práctica y el compromiso con sus estudiantes.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor" id="admision">
+            <h2>Proceso de admisión</h2>
+            <ol class="pasos">
+                <li>Revisa las carreras y elige la que más te interesa.</li>
+                <li>Completa el formulario para solicitar información.</li>
+                <li>Consulta los requisitos antes de realizar tu matrícula.</li>
+            </ol>
+            <p>El formulario es una solicitud de información, no una matrícula.</p>
+        </section>
+
+        <section class="registro" id="registro">
+            <div class="contenedor registro-contenido">
+                <div>
+                    <h2>Solicita información</h2>
+                    <p>Completa tus datos y selecciona una carrera.</p>
+                    <h3>Modalidades de estudio</h3>
+                    <p><strong>Presencial:</strong> actividades en el instituto.</p>
+                    <p><strong>Virtual:</strong> actividades desde casa.</p>
+                    <p>Este formulario es una demostración del trabajo. No envía ni guarda tus datos.</p>
+                </div>
+
+                <form id="formulario" method="post" action="#registro">
+
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" minlength="3" maxlength="80" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" class="form-control" required>
+
+                    <label for="telefono">Celular</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" pattern="9[0-9]{8}" maxlength="9" title="Escribe 9 dígitos, empezando por 9." required>
+                    <small>Celular peruano: 9 dígitos y empieza con 9.</small>
+
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" class="form-control" min="16" max="100" required>
+
+                    <label for="carrera">Carrera de interés</label>
+                    <select id="carrera" name="carrera" class="form-select" required>
+                        <option value="">Selecciona una carrera</option>
+                        <option>Desarrollo de Software</option><option>Diseño Digital</option><option>Administración de Empresas</option>
+                    </select>
+
+                    <label for="modalidad">Modalidad</label>
+                    <select id="modalidad" name="modalidad" class="form-select" required>
+                        <option value="">Selecciona una modalidad</option><option>Presencial</option><option>Virtual</option>
+                    </select>
+                    <label class="aceptacion"><input type="checkbox" name="acepto" required> Acepto usar mis datos para esta demostración.</label>
+                    <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+                    <p id="mensaje" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><strong>INNOVATEC</strong> · Instituto de formación técnica</p>
+        <p>Proyecto académico. Institución ficticia.</p>
+    </footer>
+</body>
+</html>
